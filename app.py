@@ -25,8 +25,10 @@ st.title('Identifikasi Status Mahasiswa di FT UNIB')
 # Input fields for user to input data
 curricular_units_1st_sem_enrolled = st.number_input('Jumlah SKS yang diambil di Semester 1', min_value=0, max_value=30, value=20)
 curricular_units_1st_sem_approved = st.number_input('Jumlah SKS yang disetujui Semester 1', min_value=0, max_value=30, value=15)
+curricular_units_1st_sem_grade = st.number_input('Curricular Units 1st Semester Grade', min_value=0, max_value=20, value=15)
 curricular_units_2nd_sem_enrolled = st.number_input('Jumlah SKS yang diambil di Semester 2', min_value=0, max_value=30, value=20)
 curricular_units_2nd_sem_approved = st.number_input('Jumlah SKS yang disetujui Semester 2', min_value=0, max_value=30, value=15)
+curricular_units_2nd_sem_grade = st.number_input('Curricular Units 2nd Semester Grade', min_value=0, max_value=20, value=15)
 tuition_fees_up_to_date = st.selectbox('Apakah sudah membayar UKT semester baru?', [0, 1], format_func=lambda x: 'Yes' if x == 1 else 'No')
 scholarship_holder = st.selectbox('Apakah Penerima Beasiswa?', [0, 1], format_func=lambda x: 'Yes' if x == 1 else 'No')
 admission_grade = st.slider('Nilai Masuk Perguruan Tinggi', min_value=0.0, max_value=1000.0, value=5.0, step=0.1)
@@ -36,8 +38,10 @@ displaced = st.selectbox('Merupakan Mahasiswa Pendatang/Perantau', [0, 1], forma
 input_data = [
     curricular_units_1st_sem_enrolled,
     curricular_units_1st_sem_approved,
+    curricular_units_1st_sem_grade,
     curricular_units_2nd_sem_enrolled,
     curricular_units_2nd_sem_approved,
+    curricular_units_2nd_sem_grade,
     tuition_fees_up_to_date,
     scholarship_holder,
     admission_grade,
